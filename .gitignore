@@ -2,3 +2,5 @@ node_modules
 .vercel
 .env*
 _phone-test.html
+
+.vercel

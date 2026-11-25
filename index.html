@@ -175,7 +175,8 @@ body.stills .scene{display:none}
              linear-gradient(180deg,var(--bg) 0%,var(--bg) 55%,#eaf0f0 100%)}
 
 /* ---- showcase: perspective ring of cards + founder portrait (RK-style) ---- */
-.showcase{position:absolute;inset:0;z-index:2;pointer-events:none}
+/* pinned to the visible hero (the type frame can be taller than the screen on wide displays) */
+.showcase{position:absolute;left:0;right:0;top:0;height:max(620px,100svh);z-index:2;pointer-events:none}
 /* zoom (not transform:scale) so the cards rasterise at full resolution and stay crisp */
 .ring-pos{position:absolute;left:0;right:0;bottom:0;height:calc(800px * var(--rk,1));pointer-events:none}
 .ring-wrap{position:relative;width:1172px;height:800px;margin:0 auto;zoom:var(--rk,1)}
@@ -234,7 +235,7 @@ body.stills .sphoto,body.video-src .sphoto{display:none}
 .copy{position:absolute;top:calc(298*var(--u));font-weight:600;font-stretch:104%;font-size:calc(16.5*var(--u));line-height:1.22;text-transform:uppercase;letter-spacing:-.005em}
 .copy.c1{left:calc(53*var(--u))}
 .copy.c2{left:calc(53*var(--u));top:calc(384*var(--u))}
-.copy{z-index:4}
+.copy,.info,.tag{z-index:4;text-shadow:0 0 14px var(--bg),0 0 4px var(--bg),0 0 2px var(--bg)}
 .copy b{font-weight:850}
 .ln{display:block;overflow:hidden}
 .ln>span{display:block}
@@ -1402,7 +1403,7 @@ function ringTick(dt) {
   placeRing();
 }
 // fit by width and height so the whole wheel is always on screen (short laptop screens included)
-const setRingScale = () => root.style.setProperty("--rk", phoneMQ.matches ? .86 : Math.min(root.clientWidth / 1172, Math.max(520, heroEl.clientHeight) / 860).toFixed(4));
+const setRingScale = () => root.style.setProperty("--rk", phoneMQ.matches ? .86 : Math.min(root.clientWidth / 1172, Math.max(520, heroEl.clientHeight) / 940).toFixed(4));
 setRingScale(); placeRing();
 
 // portrait: the founder cut-out drifts + tilts towards the cursor

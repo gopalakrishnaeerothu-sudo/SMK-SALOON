@@ -579,7 +579,7 @@ body.pre .nav .anim,body.pre .bar .anim{opacity:0}
               <div class="pt-glow"></div>
               <div class="pt-orbit" aria-hidden="true"><span></span></div>
               <div class="pt-frame" id="ptFrame"><span class="mono" aria-hidden="true">SMK</span>
-                <img src="assets/founder/smk-portrait.jpg" alt="Sai Murali Krishna, founder of The SMK Saloon" decoding="async" fetchpriority="high"></div>
+                <img src="assets/founder/smk-sunset.jpg" alt="Sai Murali Krishna, founder of The SMK Saloon" decoding="async" fetchpriority="high" style="object-position:60% 22%"></div>
               <div class="pt-badge"><i></i>Sai Murali Krishna · Founder</div>
             </div>
           </div>
@@ -618,7 +618,7 @@ body.pre .nav .anim,body.pre .bar .anim{opacity:0}
             <p>From timeless classic cuts to modern trending hairstyles, his approach combines creativity, attention to detail and a genuine passion for making every customer feel confident.</p>
           </article>
           <div class="dashes" aria-hidden="true"><span><i></i></span><span><i></i></span></div>
-          <figure class="sphoto s1 ph" data-label="Founder photo"><img src="assets/founder/smk-sunset.jpg" alt="Sai Murali Krishna, founder of The SMK Saloon, at sunset" loading="lazy" decoding="async"><figcaption>The founder · Since 2020</figcaption></figure>
+          <figure class="sphoto s1 ph" data-label="Founder photo"><img src="assets/founder/smk-ride.jpg" alt="Sai Murali Krishna, founder of The SMK Saloon" loading="lazy" decoding="async" style="object-position:55% 30%"><figcaption>The founder · Since 2020</figcaption></figure>
           <figure class="sphoto s2 ph" data-label="Haircut photo"><img src="assets/promo/french-crop.jpg" alt="French crop with a high skin fade" loading="lazy" decoding="async"><figcaption>Precision fades · Textured crops</figcaption></figure>
           <img class="story-still" data-src="assets/promo/salon-wood.jpg" alt="Barber chairs inside a warm wooden salon interior" decoding="async">
         </div>
@@ -1406,6 +1406,8 @@ const ptFrame = $("#ptFrame"), ptImg = $("#ptFrame img");
 const ptOk = () => ptFrame.classList.add("has-img");
 ptImg.addEventListener("load", ptOk);
 ptImg.addEventListener("error", () => { ptImg.style.display = "none"; });
+// the side-profile portrait takes over the hero as soon as that file exists
+{ const p = new Image(); p.onload = () => { ptImg.style.objectPosition = ""; ptImg.src = IMGS.portrait; }; p.src = IMGS.portrait; }
 if (ptImg.complete && ptImg.naturalWidth) ptOk();
 const portrait = $("#portrait"), ptMagnet = $("#ptMagnet");
 if (!reduce && matchMedia("(hover: hover)").matches) {

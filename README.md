@@ -36,7 +36,7 @@ The page reads these exact paths. Any file that is missing is replaced by a desi
 
 ## Business facts used
 
-- Hours: Mon, Wed, Thu, Sat, Sun · 7:00 AM–1:00 PM and 2:30 PM–8:30 PM. Closed Tuesday and Friday. The live open/closed badge uses India Standard Time.
+- Hours: Mon, Wed, Thu, Sat, Sun · 6:00 AM–1:00 PM and 2:30 PM–8:30 PM. Closed Tuesday and Friday. The live open/closed badge uses India Standard Time.
 - Phone and WhatsApp: +91 77992 99920
 - Instagram: [@its_me.smk](https://www.instagram.com/its_me.smk)
 - No prices, street address, awards or certifications are published. Services show "Contact for pricing".

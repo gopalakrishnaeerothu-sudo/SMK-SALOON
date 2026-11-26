@@ -38,7 +38,7 @@
   "address": { "@type": "PostalAddress", "addressLocality": "Duddukuru", "addressRegion": "Andhra Pradesh", "postalCode": "534313", "addressCountry": "IN" },
   "sameAs": ["https://www.instagram.com/its_me.smk"],
   "openingHoursSpecification": [
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Wednesday","Thursday","Saturday","Sunday"], "opens": "07:00", "closes": "13:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Wednesday","Thursday","Saturday","Sunday"], "opens": "06:00", "closes": "13:00" },
     { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Wednesday","Thursday","Saturday","Sunday"], "opens": "14:30", "closes": "20:30" }
   ]
 }
@@ -682,7 +682,7 @@ body.pre .nav .anim,body.pre .bar .anim{opacity:0}
         <p class="sec-sub">Open five days a week in two sessions, with a short break in the afternoon. Closed every Tuesday and Friday.</p>
         <div class="status" id="status" role="status" aria-live="polite"><i></i><span>Checking today's hours…</span></div>
         <div class="sessions">
-          <div>Morning<b>7:00 AM – 1:00 PM</b></div>
+          <div>Morning<b>6:00 AM – 1:00 PM</b></div>
           <div>Break<b>1:00 – 2:30 PM</b></div>
           <div>Evening<b>2:30 PM – 8:30 PM</b></div>
         </div>
@@ -691,13 +691,13 @@ body.pre .nav .anim,body.pre .bar .anim{opacity:0}
         <table class="week" aria-label="Weekly schedule">
           <thead><tr><th>Day</th><th>Morning</th><th>Evening</th><th class="st">Status</th></tr></thead>
           <tbody id="week">
-            <tr data-d="1"><td>Monday</td><td class="m">7:00 AM – 1:00 PM</td><td class="e">2:30 PM – 8:30 PM</td><td class="st"><span class="badge o">OPEN</span></td></tr>
+            <tr data-d="1"><td>Monday</td><td class="m">6:00 AM – 1:00 PM</td><td class="e">2:30 PM – 8:30 PM</td><td class="st"><span class="badge o">OPEN</span></td></tr>
             <tr data-d="2" class="closed"><td>Tuesday</td><td class="m">—</td><td class="e">—</td><td class="st"><span class="badge x">CLOSED</span></td></tr>
-            <tr data-d="3"><td>Wednesday</td><td class="m">7:00 AM – 1:00 PM</td><td class="e">2:30 PM – 8:30 PM</td><td class="st"><span class="badge o">OPEN</span></td></tr>
-            <tr data-d="4"><td>Thursday</td><td class="m">7:00 AM – 1:00 PM</td><td class="e">2:30 PM – 8:30 PM</td><td class="st"><span class="badge o">OPEN</span></td></tr>
+            <tr data-d="3"><td>Wednesday</td><td class="m">6:00 AM – 1:00 PM</td><td class="e">2:30 PM – 8:30 PM</td><td class="st"><span class="badge o">OPEN</span></td></tr>
+            <tr data-d="4"><td>Thursday</td><td class="m">6:00 AM – 1:00 PM</td><td class="e">2:30 PM – 8:30 PM</td><td class="st"><span class="badge o">OPEN</span></td></tr>
             <tr data-d="5" class="closed"><td>Friday</td><td class="m">—</td><td class="e">—</td><td class="st"><span class="badge x">CLOSED</span></td></tr>
-            <tr data-d="6"><td>Saturday</td><td class="m">7:00 AM – 1:00 PM</td><td class="e">2:30 PM – 8:30 PM</td><td class="st"><span class="badge o">OPEN</span></td></tr>
-            <tr data-d="0"><td>Sunday</td><td class="m">7:00 AM – 1:00 PM</td><td class="e">2:30 PM – 8:30 PM</td><td class="st"><span class="badge o">OPEN</span></td></tr>
+            <tr data-d="6"><td>Saturday</td><td class="m">6:00 AM – 1:00 PM</td><td class="e">2:30 PM – 8:30 PM</td><td class="st"><span class="badge o">OPEN</span></td></tr>
+            <tr data-d="0"><td>Sunday</td><td class="m">6:00 AM – 1:00 PM</td><td class="e">2:30 PM – 8:30 PM</td><td class="st"><span class="badge o">OPEN</span></td></tr>
           </tbody>
         </table>
         <p class="tz">Live status follows salon time (India Standard Time).</p>
@@ -1057,7 +1057,7 @@ $("#svcList").innerHTML = SERVICES.map(([t, d], i) =>
    <a href="${wa(MSG.service(t))}" target="_blank" rel="noopener">Enquire <em>· Contact for pricing</em> ↗</a></li>`).join("");
 
 /* ================================================================ hours (salon time, IST) */
-const SESS = [[7 * 60, 13 * 60], [14 * 60 + 30, 20 * 60 + 30]];
+const SESS = [[6 * 60, 13 * 60], [14 * 60 + 30, 20 * 60 + 30]];
 const CLOSED = [2, 5];
 const DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const fmt = m => { const h = Math.floor(m / 60), mm = m % 60; return `${((h + 11) % 12) + 1}:${String(mm).padStart(2, "0")} ${h < 12 ? "AM" : "PM"}`; };
@@ -1362,7 +1362,7 @@ const CARDS = [
   `${bg(IMGS.dark)}<div class="sh" style="background:linear-gradient(180deg,rgba(30,36,42,.1) 30%,rgba(30,36,42,.85) 72%)"></div>
    <div class="t" style="top:222px;font-size:13px;color:#fff">Your chair</div><div class="t" style="top:236px;font-size:13px;color:#76ABAE">is ready</div>`,
   `<div class="sh" style="background:#F5F5F5"></div><div class="k" style="top:22px;color:#777">Open 5 days</div>
-   <div class="s" style="top:40px;color:#303841;font-size:5.6px;line-height:1.9"><b>Mon · Wed · Thu<br>Sat · Sun</b><br>7:00 AM – 1:00 PM<br>2:30 PM – 8:30 PM</div>
+   <div class="s" style="top:40px;color:#303841;font-size:5.6px;line-height:1.9"><b>Mon · Wed · Thu<br>Sat · Sun</b><br>6:00 AM – 1:00 PM<br>2:30 PM – 8:30 PM</div>
    <div class="pill" style="top:118px;background:#FF5722;color:#fff">Closed Tue &amp; Fri</div>
    <div class="im" style="top:160px;background-image:url('${IMGS.wood}')"></div>`,
   `${bg(IMGS.ride)}<div class="sh" style="background:linear-gradient(180deg,rgba(30,36,42,0) 50%,rgba(30,36,42,.85) 80%)"></div>
